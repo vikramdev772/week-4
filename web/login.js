@@ -1,14 +1,14 @@
 let api = "http://40.0.49.6:4040/api/login";
 
-let x = document.getElementById("e").value;
-let y = document.getElementById("p").value;
-let db = {
-  email: x,
-  password: y
-};
-console.log("\n\t js obj :" + JSON.stringify(db, null, 2));
 async function login() {
   try {
+    let x = document.getElementById("e").value;
+    let y = document.getElementById("p").value;
+    let db = {
+        email: x,
+        password: y
+        };
+    console.log("\n\t js obj :" + JSON.stringify(db, null, 2));
     let res = await fetch(api, {
       method: "POST",
       headers: {
